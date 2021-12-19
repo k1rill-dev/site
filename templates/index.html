@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+head
+{% endblock %}
+<style type="text/css">
+     #table {
+         right: 150px;
+         bottom: 0; right: 0;
+        }
+</style>
+{% block body %}
+<h1 class="mt-5">Таблица</h1>
+<p class="lead">Здесь представлена таблица покупок</p>
+<table name="table", border="1">
+    {% for row in rows %}
+    <tr>
+         <th> ID </th>
+         <th> Fullname </th>
+         <th> Username </th>
+         <th> Telegram_ID</th>
+         <th> Категория продукта</th>
+         <th> ID покупки</th>
+    </tr>
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<form method="post">
+    <div id="content">
+        <h2>Админ-панель</h2>
+        <p class="lead"></p><h5> Введите id покупки </h5></p>
+        <p class="lead"></p><h6> После выдачи заказа, введите его id для удаления из базы. </h6></p>
+        <p class="lead"><textarea name="lol" id="lol" class="form-control" placeholder="Введите id"> </textarea>></p>
+        <p class="lead"><button>Подтвердить</button>
+    </div>
+
+    <div id="kek">
+        <p class="lead"></p><h5> Введите id пользователя </h5></p>
+        <p class="lead"></p><h6> Введите id пользователя для удаления из базы. </h6></p>
+        <p class="lead"><textarea name="id" id="id" class="form-control" placeholder="Введите id"> </textarea>></p>
+        <p class="lead"><button>Подтвердить</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        body { margin: 0; }
+        /* #content, #contentik, #enter { position: relative; } */
+        #content, #contentik, #enter { overflow: auto; padding: 10px; }
+        #header {
+         height: 80px; /* Высота слоя */
+         background: #FEDFC0; border-bottom: 2px solid #7B5427;
+        }
+        #header h1 { padding: 20px; margin: 0; }
+        #content {
+            position: absolute; /* Относительное позиционирование */
+            top: 47px; /* Расстояние от верхнего края */
+            left: 800px; /* Расстояние от левого края */
+            bottom: 0; right: 0;
+        }
+        #kek {
+         position: absolute; /* Относительное позиционирование */
+         top: 350px; /* Расстояние от верхнего края */
+         left: 810px; /* Расстояние от левого края */
+         bottom: 0; right: 0;
+        }
+        #enter {
+         position: relative; /* Относительное позиционирование */
+         top: 100px; /* Расстояние от верхнего края */
+         left: 0px; /* Расстояние от левого края */
+         bottom: 0; right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="flex-shrink-0">
+  <div class="container">
+    <!-- <h1 class="mt-5">Таблица</h1>
+    <p class="lead">Здесь представлена таблица покупок</p> -->
+
+  </div>
+</main>
+    {% block body %}  {% endblock %}
+</body>
+</html>>
